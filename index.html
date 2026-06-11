@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF - 8">
+  <meta name="viewport" content="width=device-width, initial - scale=1.0">
+  <title>My Forum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+ 
+<body>
+    <h2>Enter Password to Unlock</h2>
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    
+    <div id="protectedContent">
+        <header>
+            <h3>✅ Access Granted!</h3>
+            <p>Welcome! You have unlocked the page.</p>
+            <h1>My Forum</h1>
+    
+    
+    
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">New Post</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="forum-categories">
+            <h2>Forum Categories</h2>
+            <ul>
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+            </ul>
+            </section>
+            <section id="latest-posts">
+            <h2>Latest Posts</h2>
+            <article class="post">
+                <h3>Post Title</h3>
+                <p>Post content goes here...</p>
+                <footer>
+                <p>Posted by John Doe on January 1, 2024</p>
+                </footer>
+            </article>
+            </section>
+        </main>
+  </div>
+  <footer>
+    <p>&copy; 2024 My Forum. All rights reserved.</p>
+  </footer>
+  <script>
+        function checkPassword() {
+            const correctPassword = "diplov123";
+            const enteredPassword = document.getElementById("passwordInput").value;
+
+            if (enteredPassword === correctPassword) {
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                alert("❌ Incorrect password!");
+            }
+        }
+</script>
+</body>
+ 
+</html>
