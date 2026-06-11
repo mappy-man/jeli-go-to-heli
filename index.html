@@ -11,10 +11,11 @@
 
  
 <body>
-    <h2>Enter Password to Unlock</h2>
-    <input type="password" id="passwordInput" placeholder="Enter Password">
-    <button onclick="checkPassword()">Submit</button>
-    
+    <div id="passwordModal">
+        <h2>Enter Password to Unlock</h2>
+        <input type="password" id="passwordInput" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
     <div id="protectedContent">
         <header>
             <h1>JELI GO TO HELI - FORUM</h1>
@@ -60,8 +61,9 @@
 
             if (enteredPassword === correctPassword) {
                 document.getElementById("protectedContent").style.display = "block";
+                document.getElementById("passwordModal").style.display = "none";
             } else {
-                alert("❌ Incorrect password!");
+                alert("Incorrect password!");
             }
         }
 </script>
